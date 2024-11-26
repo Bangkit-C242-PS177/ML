@@ -6,7 +6,7 @@ import numpy as np
 from PIL import Image
 
 # Load your trained model
-model = tf.keras.models.load_model('skin_conditions_model_2.h5')
+model = tf.keras.models.load_model('models/skin_type_model.h5')
 
 def load_and_preprocess_image(img):
     try:
@@ -27,8 +27,8 @@ def predict_image(model, img_array):
     else:
         return None
 
-st.title('Skin Condition Classification')
-st.header('Upload an image to classify skin condition')
+st.title('Skin Type Classification')
+st.header('Upload an image to classify skin type')
 
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
@@ -44,7 +44,7 @@ if uploaded_file is not None:
         
         if predictions is not None:
             st.write(predictions)
-            st.write(f"Predictions: Acne: {predictions[0][0]:.2f}, Eye Bags: {predictions[0][1]:.2f}")
+            st.write(f"Predictions: Oily: {predictions[0][0]:.2f}, Normal: {predictions[0][1]:.2f}, Dry: {predictions[0][2]:.2f}")
         else:
             st.write("Prediction failed. Please try uploading a different image.")
     except Exception as e:
