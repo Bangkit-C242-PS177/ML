@@ -6,7 +6,7 @@ import numpy as np
 from PIL import Image
 
 # Load your trained model
-model = tf.keras.models.load_model('models/skin_conditions_model_2.h5')
+model = tf.keras.models.load_model('D:/capstone_models/skin_conditions_model.keras')
 
 def load_and_preprocess_image(img):
     try:
@@ -44,7 +44,14 @@ if uploaded_file is not None:
         
         if predictions is not None:
             st.write(predictions)
-            st.write(f"Predictions: Acne: {predictions[0][0]:.2f}, Eye Bags: {predictions[0][1]:.2f}")
+            if predictions[0][0] > 0.5 and predictions[0][1] > 0.5:
+                st.write("Predictions: Acne and Eyebags")
+            elif predictions[0][0] > 0.5:
+                st.write("Predictions: Acne")
+            elif predictions[0][1] > 0.5:
+                st.write("Predictions: Eyebags")
+            else:
+                st.write("Predictions: None")
         else:
             st.write("Prediction failed. Please try uploading a different image.")
     except Exception as e:

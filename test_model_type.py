@@ -6,7 +6,7 @@ import numpy as np
 from PIL import Image
 
 # Load your trained model
-model = tf.keras.models.load_model('models/skin_type_model.h5')
+model = tf.keras.models.load_model('D:/capstone_models/skin_type_model.keras')
 
 def load_and_preprocess_image(img):
     try:

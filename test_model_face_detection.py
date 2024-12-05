@@ -6,7 +6,7 @@ import numpy as np
 from PIL import Image
 
 # Load your trained model
-model = tf.keras.models.load_model('models/face_detection.h5')
+model = tf.keras.models.load_model('D:/capstone_models/face_detection.keras')
 
 def load_and_preprocess_image(img):
     try:
