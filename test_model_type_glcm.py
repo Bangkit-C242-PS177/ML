@@ -7,7 +7,7 @@ from PIL import Image
 from skimage.feature import graycomatrix, graycoprops
 
 # Load your trained model
-model = tf.keras.models.load_model('D:/capstone_models/skin_type_model.h5')
+model = tf.keras.models.load_model('D:/capstone_models/skin_type_model.keras')
 
 def extract_glcm_features(image):
     try:
