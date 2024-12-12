@@ -4,9 +4,14 @@ from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 from tensorflow.keras.preprocessing.image import img_to_array
 import numpy as np
 from PIL import Image
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+models_path = os.getenv('MODELS_PATH')
 
 # Load your trained model
-model = tf.keras.models.load_model('D:/capstone_models/skin_conditions_model_temp.keras')
+model = tf.keras.models.load_model(models_path + 'skin_conditions_model_temp.keras')
 
 def load_and_preprocess_image(img):
     try:
