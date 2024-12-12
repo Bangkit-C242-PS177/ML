@@ -1,4 +1,4 @@
-# This Is The ML Path For Capstone Project "Urkins"
+# 🧠 This Is The ML Path For Capstone Project "Urkins" 🧠
 There are two models for our mobile applications: Skin Conditions Model and Skin Type Model.
 
 ## Skin Type Model
