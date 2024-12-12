@@ -30,4 +30,4 @@ To ensure the robustness and reliability of our models, we employ **Streamlit** 
 
 ---
 
-We’re excited to bring UrKins to life and help users achieve healthier, glowing skin through the power of AI. Stay tuned for updates as we continue to refine our models and application!
+We’re excited to bring UrKins to life and help users achieve healthier, glowing skin through the power of AI!
