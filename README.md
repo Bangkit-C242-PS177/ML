@@ -1,4 +1,4 @@
-# 🧠 **Machine Learning Path for Capstone Project: UrKins** 🧠  
+# 🧠 *Machine Learning Path for Capstone Project: UrKins* 🧠  
 
 Welcome to the official repository for UrKins Machine Learning Path. This project features two core machine learning models tailored to analyze skin type and skin conditions.  
 
